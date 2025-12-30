@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#000000"/>
+  
+  <!-- Top-right L-shape: vertical arm down from top, horizontal arm left from right -->
+  <rect x="24" y="0" width="8" height="16" fill="#FFFFFF"/>
+  <rect x="16" y="8" width="16" height="8" fill="#FFFFFF"/>
+  
+  <!-- Bottom-left L-shape: vertical arm up from bottom, horizontal arm right from left -->
+  <rect x="0" y="16" width="8" height="16" fill="#FFFFFF"/>
+  <rect x="0" y="16" width="16" height="8" fill="#FFFFFF"/>
+</svg>

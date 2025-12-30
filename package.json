@@ -1,0 +1,36 @@
+{
+  "name": "businessfit-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.0",
+    "@hookform/resolvers": "^3.9.0",
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.0",
+    "eslint-config-next": "^16.0.3",
+    "framer-motion": "^12.0.0",
+    "gsap": "^3.14.1",
+    "next": "^16.0.3",
+    "postcss": "^8.4.49",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.53.0",
+    "tailwind-merge": "^2.5.0",
+    "tailwindcss": "^4.1.17",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.1",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "5.9.3"
+  }
+}

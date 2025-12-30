@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* Black - Nero puro per sfondi e testo */
+  --color-black: #000000;
+  --color-black-50: #f9fafb;
+  --color-black-100: #f3f4f6;
+  --color-black-200: #e5e7eb;
+  --color-black-300: #d1d5db;
+  --color-black-400: #9ca3af;
+  --color-black-500: #6b7280;
+  --color-black-600: #4b5563;
+  --color-black-700: #374151;
+  --color-black-800: #1f2937;
+  --color-black-900: #000000; /* Nero puro */
+  
+  /* Blue - Colore principale #2542FF */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #2542FF; /* Blu principale */
+  --color-blue-600: #1e35cc;
+  --color-blue-700: #182999;
+  --color-blue-800: #121d66;
+  --color-blue-900: #0c1233;
+  
+  /* Manteniamo navy per retrocompatibilità, ma lo mappiamo al nero */
+  --color-navy-50: #f9fafb;
+  --color-navy-100: #f3f4f6;
+  --color-navy-200: #e5e7eb;
+  --color-navy-300: #d1d5db;
+  --color-navy-400: #9ca3af;
+  --color-navy-500: #6b7280;
+  --color-navy-600: #4b5563;
+  --color-navy-700: #374151;
+  --color-navy-800: #1f2937;
+  --color-navy-900: #000000; /* Nero puro */
+  
+  /* Mappiamo energy-orange al blu per i CTA */
+  --color-energy-orange-50: #eff6ff;
+  --color-energy-orange-100: #dbeafe;
+  --color-energy-orange-200: #bfdbfe;
+  --color-energy-orange-300: #93c5fd;
+  --color-energy-orange-400: #60a5fa;
+  --color-energy-orange-500: #2542FF; /* Blu principale per CTA */
+  --color-energy-orange-600: #1e35cc;
+  --color-energy-orange-700: #182999;
+  --color-energy-orange-800: #121d66;
+  --color-energy-orange-900: #0c1233;
+  
+  /* Emerald mappato al blu per elementi secondari */
+  --color-emerald-50: #eff6ff;
+  --color-emerald-100: #dbeafe;
+  --color-emerald-200: #bfdbfe;
+  --color-emerald-300: #93c5fd;
+  --color-emerald-400: #60a5fa;
+  --color-emerald-500: #2542FF;
+  --color-emerald-600: #1e35cc;
+  --color-emerald-700: #182999;
+  --color-emerald-800: #121d66;
+  --color-emerald-900: #0c1233;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-7xl;
+  }
+  
+  .font-prompt {
+    font-family: var(--font-prompt), sans-serif;
+  }
+  
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), sans-serif;
+    font-weight: 200;
+  }
+}

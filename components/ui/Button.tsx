@@ -3,7 +3,7 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { motion } from 'framer-motion'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'> {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   children: ReactNode
@@ -18,7 +18,7 @@ export default function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-semibold rounded-lg transition-all duration-200 inline-flex items-center justify-center'
+  const baseStyles = 'font-prompt uppercase rounded-lg transition-all duration-200 inline-flex items-center justify-center'
   
   const variants = {
     primary: 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-xl',
@@ -29,7 +29,7 @@ export default function Button({
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-4 text-xl'
   }
 
   return (
@@ -37,6 +37,7 @@ export default function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
+      style={{ fontWeight: 500 }}
       {...props}
     >
       {children}

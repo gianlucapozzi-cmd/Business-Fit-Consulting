@@ -18,7 +18,7 @@ export default function Hero() {
             opacity: 0.45
           }}
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       
       {/* Background pattern overlay */}
@@ -29,6 +29,33 @@ export default function Hero() {
         }} />
       </div>
 
+      {/* Logo favicon nell'angolo - effetto uscita dallo schermo */}
+      <motion.div
+        className="absolute bottom-8 right-8 z-[10] pointer-events-none"
+        initial={{ opacity: 0, x: 50, y: 50, rotate: 15 }}
+        animate={{ 
+          opacity: 1,
+          x: 0,
+          y: 0,
+          rotate: 0,
+        }}
+        transition={{ 
+          duration: 1,
+          ease: "easeOut",
+          delay: 0.5
+        }}
+      >
+        <img
+          src="/favicon.png"
+          alt="Business Fit Consulting"
+          className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
+          style={{
+            filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))',
+            transform: 'translate(30%, 30%)'
+          }}
+        />
+      </motion.div>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
@@ -38,10 +65,11 @@ export default function Hero() {
         >
           {/* Subtitle */}
           <motion.p 
-            className="text-[27px] md:text-[31px] text-gray-300 mb-4 font-light tracking-wide"
+            className="text-[27px] text-gray-300 mb-4 font-prompt uppercase tracking-wide leading-tight whitespace-nowrap"
+            style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >
-            La guida professionale per l'acquisto o la vendita
+            LA GUIDA PROFESSIONALE PER L'ACQUISTO O LA VENDITA
           </motion.p>
 
           {/* H1 */}
@@ -54,7 +82,8 @@ export default function Hero() {
 
           {/* Supporting text */}
           <motion.p 
-            className="text-[21px] md:text-[23px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-[21px] md:text-[23px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-prompt"
+            style={{ fontWeight: 300 }}
             variants={fadeInUp}
           >
             Aiutiamo palestre e centri fitness a gestirsi, vendersi, evolversi.

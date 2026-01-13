@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
 import Button from './ui/Button'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import AnimatedContent from './AnimatedContent'
@@ -11,13 +12,17 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: 'url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)',
-            opacity: 0.45
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/Immagini/pexels-foadshariyati-29526372.jpg"
+            alt="Palestra"
+            fill
+            className="object-cover"
+            style={{ opacity: 0.45 }}
+            priority
+            quality={90}
+          />
+        </div>
         <div className="absolute inset-0 bg-black/60" />
       </div>
       
@@ -45,14 +50,17 @@ export default function Hero() {
           delay: 0.5
         }}
       >
-        <img
+        <Image
           src="/favicon.png"
           alt="Business Fit Consulting"
+          width={320}
+          height={320}
           className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
           style={{
             filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))',
             transform: 'translate(30%, 30%)'
           }}
+          priority
         />
       </motion.div>
 
@@ -82,8 +90,8 @@ export default function Hero() {
 
           {/* Supporting text */}
           <motion.p 
-            className="text-[21px] md:text-[23px] text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-prompt"
-            style={{ fontWeight: 300 }}
+            className="text-[22px] text-gray-300 mb-[30px] font-prompt uppercase tracking-wide leading-tight whitespace-nowrap -mt-[15px]"
+            style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >
             Aiutiamo palestre e centri fitness a gestirsi, vendersi, evolversi.
@@ -98,7 +106,7 @@ export default function Hero() {
             initialOpacity={0}
             threshold={0.3}
             delay={0.3}
-            className="mb-6"
+            className="mb-6 mt-3"
           >
             <Button 
               size="lg" 

@@ -1,9 +1,12 @@
 'use client'
 
-import { ButtonHTMLAttributes, ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import { ComponentPropsWithoutRef, ReactNode } from 'react'
+import { motion, HTMLMotionProps } from 'framer-motion'
 
-interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'> {
+type ButtonHTMLProps = Omit<ComponentPropsWithoutRef<'button'>, 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>
+type MotionButtonProps = Omit<HTMLMotionProps<'button'>, 'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'>
+
+interface ButtonProps extends ButtonHTMLProps {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   children: ReactNode
@@ -38,7 +41,7 @@ export default function Button({
       whileTap={{ scale: 0.98 }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
       style={{ fontWeight: 500 }}
-      {...props}
+      {...(props as MotionButtonProps)}
     >
       {children}
     </motion.button>

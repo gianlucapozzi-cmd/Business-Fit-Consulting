@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
 import Button from './ui/Button'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import AnimatedContent from './AnimatedContent'
@@ -46,17 +45,14 @@ export default function Hero() {
           delay: 0.5
         }}
       >
-        <Image
+        <img
           src="/favicon.png"
           alt="Business Fit Consulting"
-          width={320}
-          height={320}
           className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
           style={{
             filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))',
             transform: 'translate(30%, 30%)'
           }}
-          priority
         />
       </motion.div>
 

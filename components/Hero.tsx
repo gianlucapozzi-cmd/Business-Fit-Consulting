@@ -12,17 +12,13 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0">
-          <Image
-            src="/Immagini/pexels-foadshariyati-29526372.jpg"
-            alt="Palestra"
-            fill
-            className="object-cover"
-            style={{ opacity: 0.45 }}
-            priority
-            quality={90}
-          />
-        </div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: 'url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)',
+            opacity: 0.45
+          }}
+        />
         <div className="absolute inset-0 bg-black/60" />
       </div>
       

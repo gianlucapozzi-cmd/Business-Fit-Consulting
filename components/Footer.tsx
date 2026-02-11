@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Link */}
           <div className="text-center lg:text-left flex-[0.56] min-w-0">
             <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Link utili</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex flex-col items-center lg:items-start">
               <li>
                 <a href="#vendi-section" className="text-white hover:text-blue-400 transition-colors">
                   Vendi
@@ -96,7 +96,7 @@ export default function Footer() {
           {/* Legal */}
           <div className="text-center lg:text-left flex-1 min-w-0">
             <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Legal</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex flex-col items-center lg:items-start">
               <li>
                 <a href="https://www.iubenda.com/privacy-policy/86224438/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
                   Cookie Policy

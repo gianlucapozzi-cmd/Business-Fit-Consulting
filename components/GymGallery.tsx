@@ -22,16 +22,32 @@ export default function GymGallery() {
     offset: ['start end', 'end start']
   })
 
+  // Movimento per desktop: normale
   const x = useTransform(scrollYProgress, [0, 1], ['-40%', '20%'], {
     clamp: false
   })
+  
+  // Movimento per mobile: riga superiore verso destra
+  const xMobileTop = useTransform(scrollYProgress, [0, 1], ['-30%', '30%'], {
+    clamp: false
+  })
+  
+  // Movimento per mobile: riga inferiore verso sinistra (contrario)
+  const xMobileBottom = useTransform(scrollYProgress, [0, 1], ['30%', '-30%'], {
+    clamp: false
+  })
+
+  // Dividi le immagini in due gruppi per mobile
+  const topRowImages = gymImages.slice(0, Math.ceil(gymImages.length / 2))
+  const bottomRowImages = gymImages.slice(Math.ceil(gymImages.length / 2))
 
   return (
     <section 
       ref={containerRef} 
       className="pt-6 md:pt-8 pb-8 md:pb-12 bg-white overflow-hidden"
     >
-      <div className="relative -ml-20 md:-ml-28">
+      {/* Desktop: layout originale */}
+      <div className="hidden md:block relative -ml-20 md:-ml-28">
         <motion.div
           style={{ 
             x,
@@ -97,6 +113,59 @@ export default function GymGallery() {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+
+      {/* Mobile: layout a 2 righe con movimenti contrari */}
+      <div className="md:hidden space-y-4">
+        {/* Riga superiore: movimento verso destra */}
+        <div className="relative -ml-12 overflow-hidden">
+          <motion.div
+            style={{ 
+              x: xMobileTop,
+              willChange: 'transform'
+            }}
+            className="flex gap-4"
+          >
+            {[...topRowImages, ...topRowImages].map((image, index) => (
+              <motion.div
+                key={`mobile-top-${index}`}
+                className="flex-shrink-0 w-40 h-32 rounded-lg overflow-hidden shadow-lg"
+              >
+                <img
+                  src={image}
+                  alt={`Palestra ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  style={{ filter: 'brightness(0.8)' }}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Riga inferiore: movimento verso sinistra (contrario) */}
+        <div className="relative -ml-12 overflow-hidden">
+          <motion.div
+            style={{ 
+              x: xMobileBottom,
+              willChange: 'transform'
+            }}
+            className="flex gap-4"
+          >
+            {[...bottomRowImages, ...bottomRowImages].map((image, index) => (
+              <motion.div
+                key={`mobile-bottom-${index}`}
+                className="flex-shrink-0 w-40 h-32 rounded-lg overflow-hidden shadow-lg"
+              >
+                <img
+                  src={image}
+                  alt={`Palestra ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  style={{ filter: 'brightness(0.8)' }}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )

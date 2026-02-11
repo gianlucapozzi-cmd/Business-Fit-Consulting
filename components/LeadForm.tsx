@@ -130,7 +130,7 @@ export default function LeadForm() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-prompt font-bold uppercase text-black mb-4">
             Richiedi la Tua Valutazione Gratuita
           </h2>
-          <p className="text-xl text-gray-600 whitespace-nowrap">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 break-words px-4">
             Compila il form e ricevi una valutazione professionale della tua palestra entro 48 ore.
           </p>
         </motion.div>

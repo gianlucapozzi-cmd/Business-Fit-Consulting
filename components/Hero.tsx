@@ -56,40 +56,41 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      {/* Content: tutti i testi centrati, stessa max-width, margin auto */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
+          className="w-full max-w-5xl mx-auto text-center"
         >
-          {/* Subtitle */}
-          <motion.p 
-            className="text-[27px] text-gray-300 mb-4 font-prompt uppercase tracking-wide leading-tight whitespace-nowrap"
+          {/* LA GUIDA PROFESSIONALE PER VENDERE */}
+          <motion.p
+            className="w-full max-w-5xl mx-auto text-[27px] md:text-[29px] text-gray-300 mb-4 font-prompt uppercase tracking-wide leading-tight"
             style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >
-            LA GUIDA PROFESSIONALE PER L'ACQUISTO O LA VENDITA
+            LA GUIDA PROFESSIONALE PER VENDERE
           </motion.p>
 
-          {/* H1 */}
-          <motion.h1 
-            className="text-[41px] md:text-[65px] lg:text-[77px] text-white font-prompt font-bold uppercase mb-8 max-w-5xl mx-auto leading-tight"
+          {/* LA TUA PALESTRA */}
+          <motion.h1
+            className="w-full max-w-5xl mx-auto text-[41px] md:text-[65px] lg:text-[77px] text-white font-prompt font-bold uppercase mb-8 leading-tight"
             variants={fadeInUp}
           >
-            DELLA TUA <span className="text-blue-500">PALESTRA</span>
+            LA TUA <span className="text-blue-500">PALESTRA</span>
           </motion.h1>
 
-          {/* Supporting text */}
-          <motion.p 
-            className="text-[22px] text-gray-300 mb-[30px] font-prompt uppercase tracking-wide leading-tight whitespace-nowrap -mt-[15px]"
+          {/* TI AIUTIAMO CON LA VALUTAZIONE... */}
+          <motion.p
+            className="w-full max-w-5xl mx-auto text-[23px] text-gray-300 mb-[30px] font-prompt uppercase leading-relaxed"
             style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >
-            Aiutiamo palestre e centri fitness a gestirsi, vendersi, evolversi.
+            Ti aiutiamo con la valutazione e vendita della tua palestra,<br />massimizzandone il valore
           </motion.p>
 
-          {/* CTA Primary */}
+          {/* CTA centrato */}
           <AnimatedContent
             distance={50}
             direction="vertical"
@@ -98,13 +99,13 @@ export default function Hero() {
             initialOpacity={0}
             threshold={0.3}
             delay={0.3}
-            className="mb-6 mt-3"
+            className="mb-6 mt-3 max-w-5xl mx-auto flex justify-center"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={() => document.getElementById('form-valutazione')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              SCOPRI DI PIÙ
+              Scopri quanto vale la tua palestra
               <ChevronRightIcon className="w-5 h-5 ml-2" />
             </Button>
           </AnimatedContent>

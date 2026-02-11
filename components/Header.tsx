@@ -17,9 +17,10 @@ export default function Header() {
   }, [])
 
   const menuItems = [
-    { label: 'Compra', href: '#acquirenti-section' },
     { label: 'Vendi', href: '#vendi-section' },
-    { label: 'Chi Siamo', href: '#chi-siamo' },
+    { label: 'Compra', href: '#acquirenti-section' },
+    { label: 'Chi siamo', href: '#chi-siamo' },
+    { label: 'Come funziona', href: '#come-funziona' },
     { label: 'Richieste', href: '#form-valutazione' },
     { label: 'FAQ', href: '#faq-section' }
   ]
@@ -35,7 +36,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/80 backdrop-blur-sm'
       }`}
     >
       <nav className="container mx-auto px-4">
@@ -66,7 +67,8 @@ export default function Header() {
                   e.preventDefault()
                   handleClick(item.href)
                 }}
-                className="text-white hover:text-blue-500 transition-colors font-medium"
+                className="text-white hover:text-blue-400 transition-colors font-bold text-base md:text-xl drop-shadow-lg"
+                style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
               >
                 {item.label}
               </a>
@@ -76,13 +78,14 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 drop-shadow-lg"
             aria-label="Toggle menu"
+            style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
           >
             {isOpen ? (
-              <XMarkIcon className="w-6 h-6" />
+              <XMarkIcon className="w-7 h-7 font-bold" />
             ) : (
-              <Bars3Icon className="w-6 h-6" />
+              <Bars3Icon className="w-7 h-7 font-bold" />
             )}
           </button>
         </div>
@@ -104,7 +107,8 @@ export default function Header() {
                     e.preventDefault()
                     handleClick(item.href)
                   }}
-                  className="text-white hover:text-blue-500 transition-colors font-medium py-2"
+                  className="text-white hover:text-blue-400 transition-colors font-bold text-xl py-2 drop-shadow-lg"
+                  style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
                 >
                   {item.label}
                 </a>

@@ -52,7 +52,7 @@ export default function FAQ() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-prompt font-bold uppercase text-white mb-4">
             Domande Frequenti
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-[23px] text-gray-300 max-w-2xl mx-auto">
             Tutte le risposte alle domande più comuni sul nostro servizio.
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 py-4 text-gray-600 leading-relaxed border-t border-gray-100">
+                      <div className="px-6 py-4 text-[23px] text-gray-600 leading-relaxed border-t border-gray-100">
                         {faq.answer}
                       </div>
                     </motion.div>

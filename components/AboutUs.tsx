@@ -33,7 +33,7 @@ export default function AboutUs() {
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-prompt font-bold uppercase text-black mb-6">
             Dietro Business Fit Consulting
           </h3>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[23px] text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I fatti contano più delle parole e i risultati più delle promesse: siamo una famiglia di imprenditori con una storia di successi e una sincera passione per questo settore. Business Fit è il risultato del nostro impegno costante e del contributo che molti amici fidati ci hanno lasciato lungo il nostro cammino.
           </p>
         </motion.div>

@@ -10,7 +10,7 @@ const inter = Inter({
 
 const prompt = Prompt({ 
   subsets: ['latin'],
-  weight: ['700'],
+  weight: ['300', '500', '700'],
   display: 'swap',
   variable: '--font-prompt'
 })
@@ -27,8 +27,9 @@ export const metadata: Metadata = {
   description: 'Scopri quanto vale davvero la tua palestra con una valutazione professionale gratuita in 48 ore. Il primo network nazionale per la compravendita di palestre.',
   keywords: 'palestre in vendita, valutazione palestra, compravendita palestre, investimenti fitness',
   icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+    shortcut: '/favicon.png',
   },
   openGraph: {
     title: 'BusinessFit - Network Nazionale per la Compravendita di Palestre',
@@ -44,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it" className={`${inter.variable} ${prompt.variable} ${dmSans.variable}`}>
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className} suppressHydrationWarning>{children}</body>
     </html>
   )
 }

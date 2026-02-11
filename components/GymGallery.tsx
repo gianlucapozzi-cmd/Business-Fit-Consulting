@@ -22,16 +22,21 @@ export default function GymGallery() {
     offset: ['start end', 'end start']
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ['-40%', '20%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['-40%', '20%'], {
+    clamp: false
+  })
 
   return (
     <section 
       ref={containerRef} 
-      className="pt-11 md:pt-16 pb-16 md:pb-24 bg-white overflow-hidden"
+      className="pt-6 md:pt-8 pb-8 md:pb-12 bg-white overflow-hidden"
     >
       <div className="relative -ml-20 md:-ml-28">
         <motion.div
-          style={{ x }}
+          style={{ 
+            x,
+            willChange: 'transform'
+          }}
           className="flex gap-6 md:gap-8"
         >
           {/* Immagine extra all'inizio per riempire il vuoto */}

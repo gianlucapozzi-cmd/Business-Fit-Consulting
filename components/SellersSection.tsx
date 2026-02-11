@@ -22,7 +22,7 @@ export default function SellersSection() {
           <h3 className="text-2xl md:text-3xl text-blue-500 font-semibold mb-8">
             scopri oggi quanto vale
           </h3>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-[23px] text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
             Se ti stai chiedendo quanto vale davvero il tuo business, sei nel posto giusto. Conosciamo perfettamente tutte le variabili che ne determinano il valore di mercato: ti daremo nel minor tempo possibile l'analisi della tua struttura e potrai decidere in modo sicuro i tuoi prossimi step.
           </p>
           <Button
@@ -30,7 +30,7 @@ export default function SellersSection() {
             size="lg"
             onClick={() => document.getElementById('form-valutazione')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Scopri di più
+            Scopri quanto vale la tua palestra
           </Button>
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function SellersSection() {
                 <h4 className="text-xl font-bold text-black mb-3">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-[23px] text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

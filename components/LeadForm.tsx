@@ -58,9 +58,9 @@ const USER_TYPES = [
 ]
 
 const GYM_SIZES = [
-  { value: 'small', label: 'Fino a 500mq' },
-  { value: 'medium', label: '500-1000mq' },
-  { value: 'large', label: 'Oltre 1000mq' }
+  { value: '500-1000', label: '500-1000mq' },
+  { value: '1000-1500', label: '1000-1500mq' },
+  { value: 'over1500', label: 'Oltre 1500mq' }
 ]
 
 export default function LeadForm() {

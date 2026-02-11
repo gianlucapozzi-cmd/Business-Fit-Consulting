@@ -17,8 +17,8 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <GymGallery />
-      <BuyersSection />
       <SellersSection />
+      <BuyersSection />
       <AboutUs />
       <Process />
       <LeadForm />

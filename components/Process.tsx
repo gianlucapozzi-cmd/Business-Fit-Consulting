@@ -29,7 +29,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-16 md:py-24" style={{ backgroundColor: '#191919' }}>
+    <section id="come-funziona" className="py-16 md:py-24" style={{ backgroundColor: '#191919' }}>
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
@@ -41,7 +41,7 @@ export default function Process() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-prompt font-bold text-white mb-4 uppercase">
             Come Funziona
           </h2>
-          <p className="text-xl text-gray-200 max-w-2xl mx-auto font-dm-sans">
+          <p className="text-[23px] text-gray-200 max-w-3xl mx-auto font-dm-sans" style={{ lineHeight: '1.46' }}>
             Un processo semplice in 4 step per trasformare la tua palestra in un affare di successo.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export default function Process() {
                   <h3 className="text-2xl font-prompt font-bold text-navy-900 mb-3 uppercase">
                     {step.title}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed font-dm-sans">
+                  <p className="text-gray-700 font-dm-sans" style={{ lineHeight: '1.46' }}>
                     {step.description}
                   </p>
                 </div>

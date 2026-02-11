@@ -13,18 +13,32 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Integrare con servizio email (SendGrid, Resend, etc.)
-    // TODO: Salvare lead in database o CRM
-    
-    // Esempio: Invia email di notifica
-    // await sendEmail({
-    //   to: 'info@businessfit.it',
-    //   subject: 'Nuova Richiesta Valutazione',
-    //   body: `Nome: ${body.fullName}\nEmail: ${body.email}\n...`
-    // })
-
-    // Esempio: Salva in Google Sheets o Airtable
-    // await saveToSheet(body)
+    // Invia dati al webhook n8n
+    try {
+      const webhookUrl = 'https://automations.wolfoncloud.com/webhook/308b591c-674d-48c5-a177-b8cdcaeffc0f'
+      
+      await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: body.fullName,
+          email: body.email,
+          phone: body.phone,
+          region: body.region,
+          userType: body.userType,
+          gymSize: body.gymSize,
+          notes: body.notes,
+          timestamp: new Date().toISOString()
+        })
+      })
+      
+      console.log('Form data sent to n8n webhook successfully')
+    } catch (webhookError) {
+      console.error('Error sending to n8n webhook:', webhookError)
+      // Non blocchiamo la risposta anche se il webhook fallisce
+    }
 
     console.log('Form submission received:', body)
 

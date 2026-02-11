@@ -18,7 +18,7 @@ const formSchema = z.object({
   phone: z.string().min(10, 'Numero non valido'),
   region: z.string().min(1, 'Seleziona una regione'),
   userType: z.enum(['seller', 'valuation', 'buyer']),
-  gymSize: z.enum(['small', 'medium', 'large']),
+  gymSize: z.enum(['500-1000', '1000-1500', 'over1500']),
   notes: z.string().optional(),
   privacyAccepted: z.boolean().refine(val => val === true, {
     message: 'Devi accettare la privacy policy'

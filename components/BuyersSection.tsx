@@ -22,7 +22,7 @@ export default function BuyersSection() {
           <h3 className="text-2xl md:text-3xl text-blue-500 font-semibold mb-8">
             Perché investire nel fitness
           </h3>
-          <p className="text-[23px] text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-[16px] sm:text-[19px] md:text-[21px] lg:text-[23px] text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 px-4 break-words">
             Palestre e strutture fitness non sono le prime cose che vengono in mente quando si pensa al mondo delle imprese, eppure i numeri parlano chiaro: un settore in rapida crescita e caratterizzato da ricavi significativi, soprattutto se valutati insieme alla sicurezza dell'investimento.
           </p>
           <Button
@@ -71,7 +71,7 @@ export default function BuyersSection() {
                 <h4 className="text-xl font-bold text-black mb-3">
                   {item.title}
                 </h4>
-                <p className="text-[23px] text-gray-600 leading-relaxed">
+                <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-gray-600 leading-relaxed break-words">
                   {item.description}
                 </p>
               </motion.div>

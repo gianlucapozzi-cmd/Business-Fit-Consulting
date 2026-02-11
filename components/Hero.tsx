@@ -57,16 +57,16 @@ export default function Hero() {
       </motion.div>
 
       {/* Content: tutti i testi centrati, stessa max-width, margin auto */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-4 sm:px-6">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="w-full max-w-5xl mx-auto text-center"
+          className="w-full max-w-5xl mx-auto text-center overflow-hidden"
         >
           {/* LA GUIDA PROFESSIONALE PER VENDERE */}
           <motion.p
-            className="w-full max-w-5xl mx-auto text-[27px] md:text-[29px] text-gray-300 mb-4 font-prompt uppercase tracking-wide leading-tight"
+            className="w-full max-w-5xl mx-auto text-[18px] sm:text-[22px] md:text-[27px] lg:text-[29px] text-gray-300 mb-4 font-prompt uppercase tracking-wide leading-tight break-words px-2"
             style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >
@@ -75,7 +75,7 @@ export default function Hero() {
 
           {/* LA TUA PALESTRA */}
           <motion.h1
-            className="w-full max-w-5xl mx-auto text-[41px] md:text-[65px] lg:text-[77px] text-white font-prompt font-bold uppercase mb-8 leading-tight"
+            className="w-full max-w-5xl mx-auto text-[28px] sm:text-[35px] md:text-[50px] lg:text-[65px] xl:text-[77px] text-white font-prompt font-bold uppercase mb-6 md:mb-8 leading-tight break-words px-2"
             variants={fadeInUp}
           >
             LA TUA <span className="text-blue-500">PALESTRA</span>
@@ -83,7 +83,7 @@ export default function Hero() {
 
           {/* TI AIUTIAMO CON LA VALUTAZIONE... */}
           <motion.p
-            className="w-full max-w-5xl mx-auto text-[23px] text-gray-300 mb-[30px] font-prompt uppercase leading-relaxed"
+            className="w-full max-w-5xl mx-auto text-[16px] sm:text-[19px] md:text-[21px] lg:text-[23px] text-gray-300 mb-6 md:mb-[30px] font-prompt uppercase leading-relaxed break-words px-2"
             style={{ fontWeight: 500 }}
             variants={fadeInUp}
           >

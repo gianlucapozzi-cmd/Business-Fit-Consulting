@@ -41,7 +41,7 @@ export default function Process() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-prompt font-bold text-white mb-4 uppercase">
             Come Funziona
           </h2>
-          <p className="text-[23px] text-gray-200 max-w-3xl mx-auto font-dm-sans" style={{ lineHeight: '1.46' }}>
+          <p className="text-[16px] sm:text-[19px] md:text-[21px] lg:text-[23px] text-gray-200 max-w-3xl mx-auto font-dm-sans px-4 break-words" style={{ lineHeight: '1.46' }}>
             Un processo semplice in 4 step per trasformare la tua palestra in un affare di successo.
           </p>
         </motion.div>

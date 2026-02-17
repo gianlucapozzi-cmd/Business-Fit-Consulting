@@ -25,9 +25,9 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="flex flex-col md:flex-row justify-center items-start mb-12 w-full px-4"
+          className="flex flex-col md:flex-row justify-center items-center md:items-start mb-12 w-full px-4"
         >
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12 lg:gap-16 w-full max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-16 lg:gap-20 xl:gap-24 w-full max-w-7xl mx-auto">
           {/* Brand */}
           <div className="text-center lg:text-left flex-1 min-w-0">
             <img
@@ -36,9 +36,10 @@ export default function Footer() {
               className="h-auto w-auto max-w-[200px] mb-4 mx-auto lg:mx-0"
             />
             <p className="text-white mb-2">
-              La guida professionale per l'acquisto o la vendita della tua palestra.
+              Ti aiutiamo con la valutazione e vendita della tua palestra,
+              massimizzandone il valore
             </p>
-            <p className="text-white text-sm">
+            <p className="text-white text-base">
               P.IVA 13556860966
             </p>
           </div>
@@ -71,43 +72,46 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link */}
-          <div className="text-center lg:text-left flex-[0.56] min-w-0">
-            <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Link utili</h4>
-            <ul className="space-y-2 flex flex-col items-center lg:items-start">
-              <li>
-                <a href="#vendi-section" className="text-white hover:text-blue-400 transition-colors">
-                  Vendi
-                </a>
-              </li>
-              <li>
-                <a href="#acquirenti-section" className="text-white hover:text-blue-400 transition-colors">
-                  Compra
-                </a>
-              </li>
-              <li>
-                <a href="#chi-siamo" className="text-white hover:text-blue-400 transition-colors">
-                  Chi Siamo
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Link utili + Legal raggruppati */}
+          <div className="flex flex-col sm:flex-row gap-8 lg:gap-12 flex-1 justify-center lg:justify-start">
+            {/* Link utili */}
+            <div className="text-center lg:text-left flex-1 min-w-0">
+              <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Link utili</h4>
+              <ul className="space-y-2 flex flex-col items-center lg:items-start">
+                <li>
+                  <a href="#vendi-section" className="text-white hover:text-blue-400 transition-colors">
+                    Vendi
+                  </a>
+                </li>
+                <li>
+                  <a href="#acquirenti-section" className="text-white hover:text-blue-400 transition-colors">
+                    Compra
+                  </a>
+                </li>
+                <li>
+                  <a href="#chi-siamo" className="text-white hover:text-blue-400 transition-colors">
+                    Chi Siamo
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Legal */}
-          <div className="text-center lg:text-left flex-1 min-w-0">
-            <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Legal</h4>
-            <ul className="space-y-2 flex flex-col items-center lg:items-start">
-              <li>
-                <a href="https://www.iubenda.com/privacy-policy/86224438/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a href="https://www.iubenda.com/privacy-policy/86224438" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
+            {/* Legal */}
+            <div className="text-center lg:text-left flex-1 min-w-0">
+              <h4 className="font-bold text-base md:text-xl drop-shadow-lg mb-4" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>Legal</h4>
+              <ul className="space-y-2 flex flex-col items-center lg:items-start">
+                <li>
+                  <a href="https://www.iubenda.com/privacy-policy/86224438/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
+                    Cookie Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.iubenda.com/privacy-policy/86224438" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           </div>
         </motion.div>
@@ -119,7 +123,10 @@ export default function Footer() {
           variants={fadeInUp}
           className="border-t border-gray-800 pt-8 text-center text-white"
         >
-          <p>&copy; {new Date().getFullYear()} <span className="font-prompt font-bold uppercase">Business Fit Consulting</span>. Tutti i diritti riservati.</p>
+          <p>
+            &copy; {new Date().getFullYear()} <span className="font-prompt font-bold uppercase">Business Fit Consulting</span>.
+            <br className="md:hidden" /> Tutti i diritti riservati.
+          </p>
           <p className="mt-2 text-sm">
             Powered by{' '}
             <a 

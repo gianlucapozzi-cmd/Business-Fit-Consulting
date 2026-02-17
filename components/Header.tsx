@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg' : 'bg-black/80 backdrop-blur-sm'
+        isScrolled ? 'bg-black/70 backdrop-blur-sm shadow-lg' : 'bg-black/70 backdrop-blur-sm'
       }`}
     >
       <nav className="container mx-auto px-4">
@@ -96,7 +96,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pb-6 bg-black/95"
+            className="md:hidden pb-6 bg-black/70"
           >
             <div className="flex flex-col space-y-4">
               {menuItems.map((item) => (

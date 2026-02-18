@@ -6,7 +6,7 @@ import Button from './ui/Button'
 
 export default function WhyUs() {
   return (
-    <section className="pt-20 md:pt-28 pb-14 md:pb-20 bg-white">
+    <section className="pt-20 md:pt-28 pb-20 md:pb-28 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"

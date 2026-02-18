@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     description: 'Valutazione professionale gratuita della tua palestra in 48 ore.',
     type: 'website',
   },
+  other: {
+    'facebook-domain-verification': 'u4zqj2ams34t8gpyiawzkbt8jk1bnk',
+  },
 }
 
 export default function RootLayout({

@@ -18,7 +18,6 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Vendi', href: '#vendi-section' },
-    { label: 'Compra', href: '#acquirenti-section' },
     { label: 'Chi siamo', href: '#chi-siamo' },
     { label: 'Come funziona', href: '#come-funziona' },
     { label: 'Richieste', href: '#form-valutazione' },

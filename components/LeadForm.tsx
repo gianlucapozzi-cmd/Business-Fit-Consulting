@@ -16,7 +16,7 @@ const formSchema = z.object({
   fullName: z.string().min(2, 'Nome troppo corto'),
   email: z.string().email('Email non valida'),
   phone: z.string().min(10, 'Numero non valido'),
-  region: z.string().min(1, 'Seleziona una regione'),
+  city: z.string().min(2, 'Inserisci la città'),
   userType: z.enum(['seller', 'valuation', 'buyer']),
   gymSize: z.enum(['500-1000', '1000-1500', 'over1500']),
   notes: z.string().optional(),
@@ -170,13 +170,13 @@ export default function LeadForm() {
               />
             </div>
 
-            {/* Regione */}
-            <Select
-              label="La tua palestra è in"
-              {...register('region')}
-              error={errors.region?.message}
-              options={ITALIAN_REGIONS}
+            {/* Città */}
+            <Input
+              label="Città"
+              {...register('city')}
+              error={errors.city?.message}
               required
+              placeholder="Es: Milano, Roma, Catania..."
             />
 
             {/* User Type (Radio) */}

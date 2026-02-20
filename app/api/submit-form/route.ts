@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
         fullName: body.fullName,
         email: body.email,
         phone: body.phone,
-        region: body.region,
+        city: body.city,
         userType: userTypeLabels[body.userType] || body.userType, // Invia il label invece del value
         gymSize: gymSizeLabels[body.gymSize] || body.gymSize, // Invia il label invece del value
         notes: body.notes,

@@ -3,7 +3,7 @@ export interface LeadFormData {
   fullName: string
   email: string
   phone: string
-  region: string
+  city: string
   userType: 'seller' | 'valuation' | 'buyer'
   gymSize: 'small' | 'medium' | 'large'
   notes?: string
